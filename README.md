@@ -26,7 +26,8 @@ The proposed pipeline extracts word-production events from continuous iEEG recor
   <b>Figure:</b> Overview of the word-event iEEG-to-mel reconstruction and event-level unseen neural pattern detection pipeline.
 </p>
 
-
+<br>
+<br>
 
 
 

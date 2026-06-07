@@ -1,8 +1,30 @@
-# SPECOM 2026 iEEG-to-Speech LSTM Decoder
+<h1 align="center"><strong>A Lightweight LSTM-Based iEEG-to-Speech Decoder with Event-Level Unseen Neural Pattern Detection</strong></h1>
 
-This repository contains the reproducibility code for:
 
-**A Lightweight LSTM-Based iEEG-to-Speech Decoder with Event-Level Unseen Neural Pattern Detection**
+<p align="center" style="font-size: 1em; margin-top: 1em">
+<a href="https://malradhi.github.io/">Mohammed Salah Al-Radhi</a>, 
+Riad Larbi,
+<a href="https://www.semanticscholar.org/author/M%C3%A1ty%C3%A1s-Bartalis/3194027">Mátyás Bartalis</a>,
+<a href="https://scholar.google.ro/citations?user=Qf5PHwoAAAAJ&hl=en/">Géza Németh</a>
+</p>
+
+<p align="center">
+Department of Telecommunications and Artificial Intelligence, Budapest University of Technology and Economics, Budapest, Hungary  
+</p>
+
+<br>
+
+
+
+## 💡 Highlights
+1. **Lightweight iEEG-to-Mel Decoding**: Implements a compact LSTM-based decoder that maps word-event iEEG activity to 23-dimensional log-mel spectrogram features.
+2. **Word-Event Focused Preprocessing**: Extracts only word-production intervals and removes fixation/non-speech periods, allowing the model to focus on speech-related neural activity.
+3. **Temporal Alignment Analysis**: Evaluates neural-to-speech lag and context-window length, with the final configuration using a 200 ms iEEG context ending 200 ms before the target acoustic frame.
+4. **Event-Level Unseen Detection**: Uses reconstruction error as an interpretable reliability score and shows that aggregating errors over word events improves unseen-subject detection compared with frame-level scoring.
+5. **Reproducible Pipeline**: Provides scripts for raw data inspection, word-event feature extraction, LSTM training, window-size evaluation, and event-level reliability analysis.
+
+<br>
+<br>
 
 The code implements the paper pipeline:
 

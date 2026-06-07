@@ -2,8 +2,7 @@
 
 
 <p align="center" style="font-size: 1em; margin-top: 1em">
-<a href="https://malradhi.github.io/">Mohammed Salah Al-Radhi</a>, 
-Saifullah Memon,
+<a href="https://malradhi.github.io/">Mohammed Salah Al-Radhi</a>,
 <a href="https://orcid.org/0009-0007-6513-3938">Saifullah Memon</a>
 </p>
 

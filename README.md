@@ -3,9 +3,8 @@
 
 <p align="center" style="font-size: 1em; margin-top: 1em">
 <a href="https://malradhi.github.io/">Mohammed Salah Al-Radhi</a>, 
-Riad Larbi,
-<a href="https://www.semanticscholar.org/author/M%C3%A1ty%C3%A1s-Bartalis/3194027">Mátyás Bartalis</a>,
-<a href="https://scholar.google.ro/citations?user=Qf5PHwoAAAAJ&hl=en/">Géza Németh</a>
+Saifullah Memon,
+<a href="https://orcid.org/0009-0007-6513-3938">Saifullah Memon</a>
 </p>
 
 <p align="center">

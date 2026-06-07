@@ -24,7 +24,7 @@ Department of Telecommunications and Artificial Intelligence, Budapest Universit
 <br>
 <br>
 
-The code implements the paper pipeline:
+## The code implements the paper pipeline:
 
 1. Check the Python/GPU environment.
 2. Check the raw iBIDS dataset structure.

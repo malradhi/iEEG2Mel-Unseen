@@ -1,10 +1,30 @@
-# SPECOM 2026 iEEG-to-Speech LSTM Decoder
+<h1 align="center"><strong>A Lightweight LSTM-Based iEEG-to-Speech Decoder with Event-Level Unseen Neural Pattern Detection</strong></h1>
 
-This repository contains the reproducibility code for:
 
-**A Lightweight LSTM-Based iEEG-to-Speech Decoder with Event-Level Unseen Neural Pattern Detection**
+<p align="center" style="font-size: 1em; margin-top: 1em">
+<a href="https://malradhi.github.io/">Mohammed Salah Al-Radhi</a>,
+<a href="https://orcid.org/0009-0007-6513-3938">Saifullah Memon</a>
+</p>
 
-The code implements the paper pipeline:
+<p align="center">
+Department of Telecommunications and Artificial Intelligence, Budapest University of Technology and Economics, Budapest, Hungary  
+</p>
+
+<br>
+
+
+
+## 💡 Highlights
+1. **Lightweight iEEG-to-Mel Decoding**: Implements a compact LSTM-based decoder that maps word-event iEEG activity to 23-dimensional log-mel spectrogram features.
+2. **Word-Event Focused Preprocessing**: Extracts only word-production intervals and removes fixation/non-speech periods, allowing the model to focus on speech-related neural activity.
+3. **Temporal Alignment Analysis**: Evaluates neural-to-speech lag and context-window length, with the final configuration using a 200 ms iEEG context ending 200 ms before the target acoustic frame.
+4. **Event-Level Unseen Detection**: Uses reconstruction error as an interpretable reliability score and shows that aggregating errors over word events improves unseen-subject detection compared with frame-level scoring.
+5. **Reproducible Pipeline**: Provides scripts for raw data inspection, word-event feature extraction, LSTM training, window-size evaluation, and event-level reliability analysis.
+
+<br>
+<br>
+
+## 🙏 The code implements the paper pipeline:
 
 1. Check the Python/GPU environment.
 2. Check the raw iBIDS dataset structure.
@@ -12,8 +32,10 @@ The code implements the paper pipeline:
 4. Train a lightweight unidirectional LSTM decoder with a 200 ms neural-to-speech lag.
 5. Run a 50/100/200 ms context-window sweep.
 6. Compute frame-level, event-level, and subject-level unseen neural pattern detection.
+<br>
+<br>
 
-## Expected folder structure
+## 📂 Expected folder structure
 
 Place the raw iBIDS dataset here:
 
@@ -26,8 +48,10 @@ data/raw/SingleWordProductionDutch-iBIDS/
 ```
 
 The scripts assume they are run from the project root.
+<br>
+<br>
 
-## Environment
+## ⚡ Environment
 
 The main packages are listed in `requirements.txt`.
 
@@ -43,8 +67,10 @@ Then run:
 ```bash
 python scripts/01_check_environment.py
 ```
+<br>
+<br>
 
-## Step-by-step reproduction
+## 🛠️ Step-by-step reproduction
 
 ### 1. Check raw data
 
@@ -115,8 +141,10 @@ data/results_word/event_level_lag200_window200/event_level_detection_summary.csv
 data/results_word/event_level_lag200_window200/event_level_threshold_sensitivity.csv
 data/results_word/event_level_lag200_window200/figures/event_error_histogram_lag200_window200.png
 ```
+<br>
+<br>
 
-## SLURM jobs
+## 🔱 SLURM jobs
 
 Example jobs are provided in `jobs/`.
 
@@ -137,8 +165,10 @@ Run event-level evaluation:
 sed -i 's/\r$//' jobs/event_level_evaluation.sh
 sbatch jobs/event_level_evaluation.sh
 ```
+<br>
+<br>
 
-## Notes
+## ⚠️ Notes
 
 - The final paper configuration is:
   - word-event extraction
@@ -150,3 +180,20 @@ sbatch jobs/event_level_evaluation.sh
 - Seen subjects: `sub-01` to `sub-08`
 - Unseen subjects: `sub-09`, `sub-10`
 - No unseen-subject data are used for training, validation, normalization, model selection, or threshold estimation.
+
+<br>
+<br>
+
+## 📖 Citation and License
+We’ve released our code under the MIT License to support open research.  
+If you use it in your work, please consider citing us:  
+
+```bibtex
+@inproceedings{memon_alradhi2026,
+  title     = {A Lightweight LSTM-Based iEEG-to-Speech Decoder with Event-Level Unseen Neural Pattern Detection},
+  author    = {Saifullah Memon and Mohammed Salah Al-Radhi},
+  booktitle = {Submitted to SPECOM},
+  year      = {2026},
+  address   = {Ohrid, North Macedonia}
+}
+```

@@ -143,7 +143,8 @@ data/results_word/event_level_lag200_window200/figures/event_error_histogram_lag
 ```
 <br>
 <br>
-## SLURM jobs
+
+## 🔱 SLURM jobs
 
 Example jobs are provided in `jobs/`.
 

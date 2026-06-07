@@ -14,6 +14,22 @@ Department of Telecommunications and Artificial Intelligence, Budapest Universit
 
 
 
+## 🧠 Method Overview
+
+The proposed pipeline extracts word-production events from continuous iEEG recordings, aligns neural context with log-mel acoustic targets, trains a lightweight LSTM decoder, and uses event-level reconstruction error for unseen neural pattern detection.
+
+<p align="center">
+  <img src="figures/method_overview.png" width="900">
+</p>
+
+<p align="center">
+  <b>Figure:</b> Overview of the word-event iEEG-to-mel reconstruction and event-level unseen neural pattern detection pipeline.
+</p>
+
+
+
+
+
 ## 💡 Highlights
 1. **Lightweight iEEG-to-Mel Decoding**: Implements a compact LSTM-based decoder that maps word-event iEEG activity to 23-dimensional log-mel spectrogram features.
 2. **Word-Event Focused Preprocessing**: Extracts only word-production intervals and removes fixation/non-speech periods, allowing the model to focus on speech-related neural activity.

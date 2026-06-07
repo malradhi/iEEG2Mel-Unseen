@@ -34,6 +34,7 @@ Department of Telecommunications and Artificial Intelligence, Budapest Universit
 6. Compute frame-level, event-level, and subject-level unseen neural pattern detection.
 <br>
 <br>
+
 ## 📂 Expected folder structure
 
 Place the raw iBIDS dataset here:

@@ -24,7 +24,7 @@ Department of Telecommunications and Artificial Intelligence, Budapest Universit
 <br>
 <br>
 
-## The code implements the paper pipeline:
+## 🙏 The code implements the paper pipeline:
 
 1. Check the Python/GPU environment.
 2. Check the raw iBIDS dataset structure.
@@ -32,8 +32,9 @@ Department of Telecommunications and Artificial Intelligence, Budapest Universit
 4. Train a lightweight unidirectional LSTM decoder with a 200 ms neural-to-speech lag.
 5. Run a 50/100/200 ms context-window sweep.
 6. Compute frame-level, event-level, and subject-level unseen neural pattern detection.
-
-## Expected folder structure
+<br>
+<br>
+## 📂 Expected folder structure
 
 Place the raw iBIDS dataset here:
 
@@ -46,8 +47,10 @@ data/raw/SingleWordProductionDutch-iBIDS/
 ```
 
 The scripts assume they are run from the project root.
+<br>
+<br>
 
-## Environment
+## ⚡ Environment
 
 The main packages are listed in `requirements.txt`.
 
@@ -63,8 +66,10 @@ Then run:
 ```bash
 python scripts/01_check_environment.py
 ```
+<br>
+<br>
 
-## Step-by-step reproduction
+## 🛠️ Step-by-step reproduction
 
 ### 1. Check raw data
 
@@ -135,7 +140,8 @@ data/results_word/event_level_lag200_window200/event_level_detection_summary.csv
 data/results_word/event_level_lag200_window200/event_level_threshold_sensitivity.csv
 data/results_word/event_level_lag200_window200/figures/event_error_histogram_lag200_window200.png
 ```
-
+<br>
+<br>
 ## SLURM jobs
 
 Example jobs are provided in `jobs/`.
@@ -157,8 +163,10 @@ Run event-level evaluation:
 sed -i 's/\r$//' jobs/event_level_evaluation.sh
 sbatch jobs/event_level_evaluation.sh
 ```
+<br>
+<br>
 
-## Notes
+## ⚠️ Notes
 
 - The final paper configuration is:
   - word-event extraction
@@ -170,3 +178,20 @@ sbatch jobs/event_level_evaluation.sh
 - Seen subjects: `sub-01` to `sub-08`
 - Unseen subjects: `sub-09`, `sub-10`
 - No unseen-subject data are used for training, validation, normalization, model selection, or threshold estimation.
+
+<br>
+<br>
+
+## 📖 Citation and License
+We’ve released our code under the MIT License to support open research.  
+If you use it in your work, please consider citing us:  
+
+```bibtex
+@inproceedings{memon_alradhi2026,
+  title     = {A Lightweight LSTM-Based iEEG-to-Speech Decoder with Event-Level Unseen Neural Pattern Detection},
+  author    = {Saifullah Memon and Mohammed Salah Al-Radhi},
+  booktitle = {Submitted to SPECOM},
+  year      = {2026},
+  address   = {Ohrid, North Macedonia}
+}
+```
